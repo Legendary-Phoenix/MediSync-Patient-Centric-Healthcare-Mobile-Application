@@ -71,7 +71,7 @@ MediSync bridges the gap between modern digital healthcare systems and smaller, 
 
 To contribute and push updates to GitHub, follow these steps:
 
-### 1. Clone the Repository
+### 1. Clone the Project
 
 ```bash
 git clone https://github.com/Legendary-Phoenix/MediSync-Patient-Centric-Healthcare-Mobile-Application.git
@@ -86,6 +86,50 @@ git remote add origin https://github.com/Legendary-Phoenix/MediSync-Patient-Cent
 ```
 
 > ⚠️ You only need to initialize Git and add the remote once. Do not repeat this step every time.
+
+---
+
+## 📦 Install Flutter Dependencies
+
+Open the project folder in Visual Studio Code (VSC) and run:
+
+```bash
+flutter pub get
+```
+
+---
+
+## 🔐 Firebase Setup
+
+> ⚠️ Important: You must accept the Firebase project invitation first. Otherwise, the project will not appear when running `flutterfire configure`.
+
+### 1. Open Command Prompt or Terminal
+
+Navigate to the directory where the medisync folder is stored.
+
+### 2. Login to Firebase
+
+```bash
+firebase login
+```
+
+### 3. Register with Firebase Project
+
+```bash
+flutterfire configure
+```
+
+- Select the correct Firebase project
+
+- Choose only Android for the platform
+
+- This will generate the required `firebase_options.dart` file automatically
+
+### 4. Your're Ready!
+
+Firebase Authentication, Firestore, and Firebase Storage will now be available in your project.
+
+---
 
 ## 🔄 Making and Pushing Changes
 
