@@ -125,7 +125,7 @@ flutterfire configure
 
 - This will generate the required `firebase_options.dart` file automatically
 
-### 4. Your're Ready!
+### 4. You're Ready!
 
 Firebase Authentication, Firestore, and Firebase Storage will now be available in your project.
 
