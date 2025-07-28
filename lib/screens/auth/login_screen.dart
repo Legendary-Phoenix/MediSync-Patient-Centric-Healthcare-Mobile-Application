@@ -58,18 +58,20 @@ class _LoginScreenState extends State<LoginScreen> {
           final verified = data['verified'] == true;
 
           if (context.mounted) {
-            if (!verified) {
-              Navigator.pushReplacementNamed(context, '/verify/$role');
-            } else {
-              Navigator.pushReplacementNamed(context, '/$role/home');
-            }
-
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text('Login successful!'),
+                duration: Duration(seconds: 1),
                 backgroundColor: Colors.green,
               ),
             );
+
+            await Future.delayed(const Duration(seconds: 1));
+            if (!verified) {
+              Navigator.pushReplacementNamed(context, '/verify/$role');
+            } else {
+              Navigator.pushReplacementNamed(context, '/$role/mainScreen');
+            }
           }
 
           return; // stop after finding the correct role

@@ -62,10 +62,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Registration successful!'),
+            duration: Duration(seconds: 1),
             backgroundColor: Colors.green,
           ),
         );
-
+        await Future.delayed(const Duration(seconds: 1));
         Navigator.pushReplacementNamed(
           context,
           '/verify/$_selectedRole', // e.g. /verify/patient

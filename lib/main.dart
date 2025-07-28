@@ -4,6 +4,7 @@ import 'package:medisync/screens/auth/register_screen.dart';
 import 'package:medisync/screens/doctor/home.dart';
 import 'package:medisync/screens/healthCenter/home.dart';
 import 'package:medisync/screens/patient/home.dart';
+import 'package:medisync/screens/patient/main_screen.dart';
 import 'package:medisync/screens/verify/doctor.dart';
 import 'package:medisync/screens/verify/healthCenter.dart';
 import 'package:medisync/screens/verify/patient.dart';
@@ -33,16 +34,14 @@ class MediSyncApp extends StatelessWidget {
         ),
         textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.black)),
       ),
-      initialRoute: "/register", // 👈 Set initial screen
+      initialRoute: "/login", // 👈 Set initial screen
       routes: {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
         '/verify/patient': (context) => const VerifyPatientScreen(),
         '/verify/doctor': (context) => const VerifyDoctorScreen(),
         '/verify/healthCenter': (context) => const VerifyHealthCenter(),
-        '/patient/home': (context) => const PatientHomeScreen(),
-        '/doctor/home': (context) => const DoctorHomeScreen(),
-        '/healthCenter/home': (context) => const HealthCenterHomeScreen(),
+        '/patient/mainScreen': (context) => const PatientMainScreen(),
       },
     );
   }
